@@ -14,4 +14,8 @@ export class AgregarComponent {
 
   constructor(private fb: FormBuilder ){}
 
+  tieneError(field: string): boolean {
+    return this.formulario.get(field)?.invalid && this.formulario.get(field)?.touched || false;
+  }
+
 }

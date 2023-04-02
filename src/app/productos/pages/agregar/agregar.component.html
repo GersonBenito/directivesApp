@@ -7,7 +7,7 @@
             <input type="text" formControlName="nombre" class="form-control" placeholder="Gerson Benito">
             <span
                 error-msg
-                mensaje="Campo nombre es requerido"
+                [valid]="tieneError('nombre')"
             >
             </span>
         </div>
@@ -22,3 +22,7 @@
 <h3 class="mt-5">Formulario</h3>
 <pre>value: {{formulario.value | json}}</pre>
 <pre>valid: {{formulario.valid}}</pre>
+
+<div class="row mt-5" *ngIf="tieneError('nombre')">
+
+</div>
