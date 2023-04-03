@@ -27,7 +27,11 @@ export class ErrorMsgDirective implements OnInit{
     this.elementR.nativeElement.style.display = display;
 
     // TODO: agregar que el input cambie de color
-
+    // console.log(this.elementR.nativeElement.parentElement?.children[1]);
+    // const input = document.querySelector('input');
+    // console.log(input);
+    
+    
   };
 
   @Input() public classList: string = 'form-text';
